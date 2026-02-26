@@ -1,0 +1,186 @@
+/* =========================
+   Root Theme Variables
+========================= */
+:root {
+    --black: #1E1E1E;
+    --mint-light: #97e9f4;       /* top of gradient */
+    --mint-dark: #005f57;        /* bottom of gradient */
+    --white: #ffffff;
+    --card-radius: 15px;
+    --btn-radius: 8px;
+}
+
+/* =========================
+   Global Styles
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--mint-light), var(--mint-dark));
+    color: #333333;
+}
+
+/* =========================
+   Navbar / Header
+========================= */
+.navbar {
+    background-color: var(--mint-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.navbar .nav-link {
+    color: var(--white);
+    margin-left: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar .nav-link:first-child {
+    margin-left: 0;
+}
+
+.navbar .nav-link:hover {
+    color: #000000; /* hover black for links */
+}
+
+/* =========================
+   Hero / Body Section
+========================= */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1E1E1E;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   Upload Box
+========================= */
+.upload-box {
+    background-color: var(--white);
+    border-radius: var(--card-radius);
+    padding: 40px 30px;
+    width: 50%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.upload-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+.upload-box p {
+    color: #555555;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.upload-box input[type="file"] {
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #005f57;  /* default button color */
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--btn-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #000000;  /* hover color */
+}
+
+/* =========================
+   Description / Info Section
+========================= */
+.info-box {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: var(--card-radius);
+    padding: 30px 25px;
+    width: 60%;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.info-box h4 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.info-box p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.btn-custom-outline {
+    background-color: transparent; 
+    color: white;                  
+    border: 1px solid white;       
+    transition: all 0.3s ease;    
+}
+
+.btn-custom-outline:hover {
+    background-color: black;       
+    color: white;                  
+    border-color: black;           
+}
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 992px) {
+    .upload-box, .info-box {
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .upload-box, .info-box {
+        width: 95%;
+    }
+}
